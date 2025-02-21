@@ -45,6 +45,7 @@ automatcly setup your main class;
 # Roadmap / goals
 - [ ] basic build with maven like file tree
 - [ ] download maven dependencies
+    - [ ] Parallel download of pom and artifacts? (maven only does artifacts, pom are downloaded in a serial manner)
 - [ ] a `doc` command that compile all the javadoc of the dependencies and servers
   them locally, kinda like `cargo doc` from rust
 - [ ] A test command that runs junit tests and print the surfire report in a
@@ -52,6 +53,7 @@ nice way
 - [ ] Multi module project support
 - [ ] Pom.xml generation (sadly we need it for publishing libraries)
 - [ ] Provide example and facility building JNI based libraries
+- [ ] Lock file?
 
 
 # Main inspirations for this project:
