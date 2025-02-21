@@ -10,8 +10,10 @@ Because java build tools does not have to be miserable
 import build.java.Builder;
 
 void main() {
-    var compilationResult = Builder.compileTree("src/");
-    Builder.buildJar("my-project", compilationResult);
+    var ws = Builder.makeWorkspace("my-project");
+    ws.dependOn("com.googlecode.json-simple:json-simple:1.1.1")
+    ws.addTree("src/"); // will add your .java files for compilation, and will bundle your resources
+    ws.buildUberJar(); // or just buildJar() if you prefer to not bundle your deps inside the jar
 }
 ```
 
@@ -24,7 +26,7 @@ have a main method.
 build-java
 ```
 
-And done! Now you can run `java -jar ./my-project.jar`, build.java will
+And done! Now you can run `java -jar ./my-project.jar`, build.java already
 automatcly setup your main class;
 
 
@@ -41,3 +43,4 @@ automatcly setup your main class;
 - [Clojure's tools.build](https://clojure.org/guides/tools_build)
 - [Zig build system](https://ziglang.org/learn/build-system/)
 - The Jai programing language
+- [nob.h - NoBuild](https://github.com/tsoding/nob.h)
