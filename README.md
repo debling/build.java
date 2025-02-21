@@ -1,4 +1,7 @@
 # build.java
+> [!WARNING]
+> This project is not in a production-ready state yet!
+
 Because java build tools does not have to be miserable
 
 # Usage this build system (or future usage, we are getting there)
@@ -37,6 +40,18 @@ automatcly setup your main class;
 - Make it easy to extend the build, easy to bake file and doing custom steps (the complete oposite of maven).
 - A usable report for unit tests in the terminal (i dont know why this one is hard, both gradle and maven are very sucky at this unless you spend a good amount of time configurating custom reporters)
 - Provide a good user experiance for java developers, even for the ones that are afraid of the terminal
+
+
+# Roadmap / goals
+- [ ] basic build with maven like file tree
+- [ ] download maven dependencies
+- [ ] a `doc` command that compile all the javadoc of the dependencies and servers
+  them locally, kinda like `cargo doc` from rust
+- [ ] A test command that runs junit tests and print the surfire report in a
+nice way
+- [ ] Multi module project support
+- [ ] Pom.xml generation (sadly we need it for publishing libraries)
+- [ ] Provide example and facility building JNI based libraries
 
 
 # Main inspirations for this project:
